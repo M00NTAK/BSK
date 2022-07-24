@@ -56,7 +56,7 @@ void recieveChar() { //a function recieves a letter from python thru serial comm
 
 void pressKey() { //a function operates hotkey based on transmitted letter in recievechar()
     switch(receivedChar) {
-        case 'a': //블러드 소드
+        case 'A': //블러드 소드
         Keyboard.press(upArrow);
         random_delay(48, 8);
         Keyboard.release(upArrow);
@@ -64,9 +64,10 @@ void pressKey() { //a function operates hotkey based on transmitted letter in re
         Keyboard.press('z');
         random_delay(78, 42);
         Keyboard.release('z');
+        while(Serial.read() != '0');
         break;
 
-        case 's': //아웃레이지 브레이크
+        case 'S': //아웃레이지 브레이크
         Keyboard.press(downArrow);
         random_delay(48, 8);
         Keyboard.release(downArrow);
@@ -74,9 +75,10 @@ void pressKey() { //a function operates hotkey based on transmitted letter in re
         Keyboard.press('z');
         random_delay(78, 42);
         Keyboard.release('z');
+        while(Serial.read() != '0');
         break;
 
-        case 'd': //격노
+        case 'D': //격노
         Keyboard.press(upArrow);
         random_delay(34, 14);
         Keyboard.release(upArrow);
@@ -84,9 +86,10 @@ void pressKey() { //a function operates hotkey based on transmitted letter in re
         Keyboard.press('x');
         random_delay(78, 42);
         Keyboard.release('x');
+        while(Serial.read() != '0');
         break;
 
-        case 'f': //버스트 퓨리
+        case 'F': //버스트 퓨리
         Keyboard.press(downArrow);
         random_delay(48, 8);
         Keyboard.release(downArrow);
@@ -94,9 +97,10 @@ void pressKey() { //a function operates hotkey based on transmitted letter in re
         Keyboard.press('x');
         random_delay(78, 42);
         Keyboard.release('x');
+        while(Serial.read() != '0');
         break;
 
-        case 'g': //레이징 퓨리
+        case 'G': //레이징 퓨리
         Keyboard.press(upArrow);
         random_delay(48, 8);
         Keyboard.release(upArrow);
@@ -104,9 +108,10 @@ void pressKey() { //a function operates hotkey based on transmitted letter in re
         Keyboard.press('c');
         random_delay(78, 42);
         Keyboard.release('c');
+        while(Serial.read() != '0');
         break;
 
-        case 'v': //블러디 레이브
+        case 'V': //블러디 레이브
         Keyboard.press(downArrow);
         random_delay(48, 8);
         Keyboard.release(downArrow);
@@ -114,9 +119,10 @@ void pressKey() { //a function operates hotkey based on transmitted letter in re
         Keyboard.press('c');
         random_delay(78, 42);
         Keyboard.release('c');
+        while(Serial.read() != '0');
         break;
 
-        case 'q': // alt, 페이탈 블러드
+        case 'Q': // alt, 페이탈 블러드
         Keyboard.press(upArrow);
         random_delay(48, 8);
         Keyboard.press(downArrow);
@@ -128,9 +134,10 @@ void pressKey() { //a function operates hotkey based on transmitted letter in re
         Keyboard.press('z');
         random_delay(72, 35);
         Keyboard.release('z');
+        while(Serial.read() != '0');
         break;
 
-        case 'w': // ctrl, 램펀트 매드니스
+        case 'W': // ctrl, 램펀트 매드니스
         Keyboard.press(upArrow);
         random_delay(64, 42);
         Keyboard.press(downArrow);
@@ -142,9 +149,10 @@ void pressKey() { //a function operates hotkey based on transmitted letter in re
         Keyboard.press('x');
         random_delay(72, 35);
         Keyboard.release('x');
+        while(Serial.read() != '0');
         break;
 
-        case 'e': // shift, 블러드붐
+        case 'E': // shift, 블러드붐
         Keyboard.press(upArrow);
         random_delay(64, 42);
         Keyboard.press(downArrow);
@@ -156,6 +164,7 @@ void pressKey() { //a function operates hotkey based on transmitted letter in re
         Keyboard.press('c');
         random_delay(72, 35);
         Keyboard.release('c');
+        while(Serial.read() != '0');
         break;
     }
 
